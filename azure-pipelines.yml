@@ -1,0 +1,47 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
+
+  - script: |
+      echo Add other tasks to build, test, and deploy your project.
+      echo See https://aka.ms/yaml
+    displayName: 'Run a multi-line script'
+
+  - script: |
+      # Additional steps for your Identity project
+      echo Running tests...
+      dotnet test
+    displayName: 'Run tests'
+
+  - script: |
+      # Additional steps for your Identity project
+      echo Building and packaging the application...
+      dotnet build --configuration Release
+      dotnet publish --configuration Release --output ./publish
+    displayName: 'Build and Publish'
+
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: './publish'
+      Contents: '**'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    displayName: 'Copy published files'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'IdentityApp'
+    displayName: 'Publish artifacts'
