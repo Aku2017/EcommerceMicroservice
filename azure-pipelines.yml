@@ -1,0 +1,20 @@
+# azure-pipelines.yml
+
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - job: Build
+    displayName: 'Build Job'
+    steps:
+      - script: echo Building...
+        displayName: 'Build Step'
+  
+  - job: Test
+    displayName: 'Test Job'
+    steps:
+      - script: echo Testing...
+        displayName: 'Test Step'
