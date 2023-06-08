@@ -1941,11 +1941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mike\\source\\repos\\IdentityService\\IdentityService\\IdentityService.csproj",
+      "projectUniqueName": "C:\\Users\\Mike\\Desktop\\My Projects\\IdentityService\\IdentityService\\IdentityService.csproj",
       "projectName": "IdentityService",
-      "projectPath": "C:\\Users\\Mike\\source\\repos\\IdentityService\\IdentityService\\IdentityService.csproj",
+      "projectPath": "C:\\Users\\Mike\\Desktop\\My Projects\\IdentityService\\IdentityService\\IdentityService.csproj",
       "packagesPath": "C:\\Users\\Mike\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mike\\source\\repos\\IdentityService\\IdentityService\\obj\\",
+      "outputPath": "C:\\Users\\Mike\\Desktop\\My Projects\\IdentityService\\IdentityService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mike\\AppData\\Roaming\\NuGet\\NuGet.Config",
